@@ -1,0 +1,342 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde-principal: #176b45;
+    --verde-escuro: #0d4d31;
+    --verde-medio: #23865a;
+    --verde-claro: #e8f5ee;
+    --branco: #ffffff;
+    --texto-claro: #e4f1e9;
+    --amarelo: #ffd54a;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f8f5;
+    color: #263b31;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+============================== */
+
+.conteudo {
+    min-height: 60vh;
+
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+.conteudo h1 {
+    color: var(--verde-principal);
+
+    margin-bottom: 15px;
+}
+
+
+/* ==============================
+   RODAPÉ
+============================== */
+
+.rodape {
+    background-color: var(--verde-principal);
+
+    color: var(--branco);
+}
+
+
+/* ==============================
+   ÁREA PRINCIPAL DO RODAPÉ
+============================== */
+
+.rodape-container {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 50px 0 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.3fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 40px;
+}
+
+
+/* ==============================
+   COLUNAS
+============================== */
+
+.coluna h2 {
+    font-size: 1.1rem;
+
+    margin-bottom: 18px;
+
+    color: var(--branco);
+}
+
+.coluna p {
+    font-size: 0.95rem;
+
+    color: var(--texto-claro);
+
+    margin-bottom: 12px;
+}
+
+
+/* ==============================
+   LINKS
+============================== */
+
+.rodape a {
+    color: var(--texto-claro);
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.rodape a:hover {
+    color: var(--amarelo);
+
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   LISTAS
+============================== */
+
+.coluna ul {
+    list-style: none;
+}
+
+.coluna li {
+    margin-bottom: 9px;
+}
+
+
+/* ==============================
+   CONTATOS
+============================== */
+
+.contatos {
+    margin-top: 20px;
+}
+
+.contatos strong {
+    color: var(--branco);
+}
+
+
+/* ==============================
+   REDES SOCIAIS
+============================== */
+
+.redes {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.redes a {
+    width: fit-content;
+
+    padding: 5px 0;
+}
+
+
+/* ==============================
+   ACESSIBILIDADE
+============================== */
+
+.acessibilidade {
+    background-color: var(--verde-escuro);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+    padding: 25px 0;
+}
+
+.acessibilidade-container {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+}
+
+.icone {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--branco);
+
+    color: var(--verde-principal);
+
+    border-radius: 50%;
+
+    font-size: 1.4rem;
+}
+
+.acessibilidade h2 {
+    font-size: 1.05rem;
+
+    margin-bottom: 8px;
+}
+
+.acessibilidade p {
+    color: var(--texto-claro);
+
+    font-size: 0.92rem;
+
+    margin-bottom: 8px;
+}
+
+.acessibilidade a {
+    color: var(--amarelo);
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   PARTE FINAL DO RODAPÉ
+============================== */
+
+.rodape-final {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 20px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.rodape-final p {
+    color: var(--texto-claro);
+
+    font-size: 0.85rem;
+}
+
+.rodape-final nav {
+    display: flex;
+
+    gap: 20px;
+}
+
+.rodape-final a {
+    font-size: 0.85rem;
+}
+
+
+/* ==============================
+   FOCO PARA TECLADO
+============================== */
+
+a:focus-visible {
+    outline: 3px solid var(--amarelo);
+
+    outline-offset: 4px;
+
+    border-radius: 3px;
+}
+
+
+/* ==============================
+   EFEITO DOS LINKS
+============================== */
+
+.coluna a:hover {
+    color: var(--amarelo);
+}
+
+
+/* ==============================
+   TABLETS
+============================== */
+
+@media (max-width: 900px) {
+
+    .rodape-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 35px;
+    }
+
+}
+
+
+/* ==============================
+   CELULARES
+============================== */
+
+@media (max-width: 600px) {
+
+    .rodape-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 35px 0 30px;
+    }
+
+    .acessibilidade-container {
+        flex-direction: column;
+    }
+
+    .rodape-final {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .rodape-final nav {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
